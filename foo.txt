@@ -1,0 +1,4 @@
+Narasimha Karamunchi is the founder of CareerMonk Publications and author of a few books on data structures, algorithms, and
+design patterns.He was a software developer who has been both interviewer and interviewee over his long career.Most recently,
+he worked on Amazon Corporation,IBM software Labs,Mentor Graphics, and Microsoft. Narasimha hols an M.Tech. in computer science
+from IIT,Bombay.

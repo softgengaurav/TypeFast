@@ -17,8 +17,22 @@ function readTextFile(file)
     }
     rawFile.send(null);
 }
-
-readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/foo.txt");
+//readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/foo.txt");
+/*New Code 2nd July*/
+var n=prompt("Enter the lesson no.");
+switch(n)
+{
+case 'a':
+readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/one.txt");
+break;
+case 'b':
+readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/two.txt");
+break;
+case 'c':
+readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/three.txt");
+break;
+}
+//newcode ends
 
 
 window.onload=function()

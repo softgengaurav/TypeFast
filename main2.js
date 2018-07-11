@@ -17,22 +17,70 @@ function readTextFile(file)
     }
     rawFile.send(null);
 }
-//readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/foo.txt");
-/*New Code 2nd July*/
-var n=prompt("Enter the lesson no.");
+var str=window.location.toString();
+var n=str[str.length-1];
 switch(n)
 {
-case 'a':
-readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/one.txt");
+case '1':
+readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/lesson/one.txt");
 break;
-case 'b':
-readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/two.txt");
+case '2':
+readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/lesson/two.txt");
 break;
-case 'c':
-readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/three.txt");
+case '3':
+readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/lesson/three.txt");
+break;
+case '4':
+readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/lesson/four.txt");
+break;
+case '5':
+readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/lesson/five.txt");
 break;
 }
+//readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/foo.txt");
+/*function changeFunc()
+{
+var lesson=document.getElementById("num");
+var selectedvalue=lesson.options[lesson.selectedIndex].value;
+alert(selectedvalue);
+//readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/one.txt");
+switch(selectedvalue)
+{
+	case "l1":
+	readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/one.txt");
+break;
+case "l2":
+readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/two.txt");
+break;
+case "l3":
+readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/three.txt");
+break;
+case "l4":
+readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/four.txt");
+break;
+case "l5":
+readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/five.txt");
+break;
+	
+}
+}*/
+/*New Code 2nd July*/
+/*var n=prompt("Enter the lesson no.");
+switch(n)
+{
+case '1':
+readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/one.txt");
+break;
+case '2':
+readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/two.txt");
+break;
+case '3':
+readTextFile("file:///C:/Users/GAURAV/Desktop/HartronWorkspace/RapidTyping/three.txt");
+break;
+}*/
 //newcode ends
+
+
 
 
 window.onload=function()
@@ -109,12 +157,463 @@ else if(event.keyCode==16)
 shift=1;
 else if(event.keyCode==20)
 {caps=(caps+=1)%2;shift=0;}
-else if(event.keyCode==188&&text[c1]==",")
-{arr[1][c1]=1;
+else if(event.keyCode==191)
+{
+	if(text[c1]=="/"&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else if(text[c1]=="?"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==188)
+{
+	if(text[c1]==","&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else if(text[c1]=="<"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==190)
+{
+if(text[c1]=="."&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else if(text[c1]==">"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==219)
+{
+	if(text[c1]=="["&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else if(text[c1]=="{"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==221)
+{
+	if(text[c1]=="]"&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+else if(text[c1]=="}"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==186)
+{
+	if(text[c1]==";"&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+else if(text[c1]==":"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==187)
+{
+	if(text[c1]=="="&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+else if(text[c1]=="+"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==189)
+{
+	if(text[c1]=="-"&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+else if(text[c1]=="_"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==48)
+{
+	if(text[c1]=="0"&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+else if(text[c1]==")"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==49)
+{
+	if(text[c1]=="1"&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+else if(text[c1]=="!"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==50)
+{
+	if(text[c1]=="2"&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+else if(text[c1]=="@"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==51)
+{
+	if(text[c1]=="3"&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+else if(text[c1]=="#"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==52)
+{
+	if(text[c1]=="4"&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+else if(text[c1]=="$"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==53)
+{
+	if(text[c1]=="5"&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+else if(text[c1]=="%"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==54)
+{
+	if(text[c1]=="6"&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+else if(text[c1]=="^"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==55)
+{
+	if(text[c1]=="7"&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+else if(text[c1]=="&"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==56)
+{
+	if(text[c1]=="8"&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+else if(text[c1]=="*"&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==57)
+{
+	if(text[c1]=="9"&&shift==0)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+else if(text[c1]=="("&&shift==1)
+	{
+	arr[1][c1]=1;
+	shift=0;
+	c1+=1;
+	}
+	else
+	{
+	arr[1][c1]=-1;
+	shift=0;
+	c1+=1;
+	}
+}
+else if(event.keyCode==107&&text[c1]=="+")
+{
+arr[1][c1]=1;
 shift=0;
 c1+=1;
 }
-else if(event.keyCode==190&&text[c1]==".")
+else if(event.keyCode==109&&text[c1]=="-")
+{
+arr[1][c1]=1;
+shift=0;
+c1+=1;
+}
+else if(event.keyCode==106&&text[c1]=="*")
+{
+arr[1][c1]=1;
+shift=0;
+c1+=1;
+}
+else if(event.keyCode==111&&text[c1]=="/")
+{
+arr[1][c1]=1;
+shift=0;
+c1+=1;
+}
+else if(event.keyCode==96&&text[c1]=="0")
+{
+arr[1][c1]=1;
+shift=0;
+c1+=1;
+}
+else if(event.keyCode==97&&text[c1]=="1")
+{
+arr[1][c1]=1;
+shift=0;
+c1+=1;
+}
+else if(event.keyCode==98&&text[c1]=="2")
+{
+arr[1][c1]=1;
+shift=0;
+c1+=1;
+}
+else if(event.keyCode==99&&text[c1]=="3")
+{
+arr[1][c1]=1;
+shift=0;
+c1+=1;
+}
+else if(event.keyCode==100&&text[c1]=="4")
+{
+arr[1][c1]=1;
+shift=0;
+c1+=1;
+}
+else if(event.keyCode==101&&text[c1]=="5")
+{
+arr[1][c1]=1;
+shift=0;
+c1+=1;
+}
+else if(event.keyCode==102&&text[c1]=="6")
+{
+arr[1][c1]=1;
+shift=0;
+c1+=1;
+}
+else if(event.keyCode==103&&text[c1]=="7")
+{
+arr[1][c1]=1;
+shift=0;
+c1+=1;
+}
+else if(event.keyCode==104&&text[c1]=="8")
+{
+arr[1][c1]=1;
+shift=0;
+c1+=1;
+}
+else if(event.keyCode==105&&text[c1]=="9")
 {
 arr[1][c1]=1;
 shift=0;
@@ -191,15 +690,19 @@ var interval;
 function startTimer(){
 interval=setInterval(changesec,1000);
 }
+var endtime;
+var spd=0;
 function changesec()
 {sec+=1;
 sec1=sec%60;
 min=Math.floor(sec/60);
 var str;
-if(min>=10)if(sec>=10)str=min+":"+sec1;else str=min+":"+"0"+sec1;else if(sec>=10)str="0"+min+":"+sec1;else str="0"+min+":"+"0"+sec1;
-document.getElementById("timer").innerHTML='Time: '+str;
 
-document.getElementById("speed").innerHTML='Speed: '+(nw/(min+sec/60)).toFixed(2)+' words/minute';
+if(min>=10)if(sec>=10)str=min+":"+sec1;else str=min+":"+"0"+sec1;else if(sec>=10)str="0"+min+":"+sec1;else str="0"+min+":"+"0"+sec1;
+{document.getElementById("timer").innerHTML='Time: '+str;endtime=str;}
+
+spd=(nw/(min+sec/60)).toFixed(2)
+document.getElementById("speed").innerHTML='Speed: '+spd+' words/minute';
 }
 
 function over()
@@ -209,6 +712,7 @@ clearInterval(interval);
 document.getElementById("speed").innerHTML='Speed: '+(nw/(min+sec/60)).toFixed(2)+' words/minute';
 var speed=(nw/(min+sec/60)).toFixed(2);
 var time=document.getElementById("timer").innerHTML;
-alert("speed: "+speed+"\t"+time);
-window.close();
+window.location.href="b.html? "+spd+"&"+endtime;
+//alert("speed: "+speed+"\t"+time);
+//window.close();
 }

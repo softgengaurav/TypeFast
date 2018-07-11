@@ -1,0 +1,90 @@
+<html>
+<head>
+<script src="js/bootstrap.js">
+</script>
+<script src="js/f.js"></script>
+<link rel="stylesheet" href="css/bootstrap.css">
+<style>
+.box
+{
+width:50%;
+height:50%;
+border:1px solid;
+//margin:10%;
+//margin-left:20%;
+border-radius:20px;
+}
+#num
+{
+height:50px;
+width:70%;
+background-color:yellow;
+color:maroon;
+border-radius:8px;
+font-size:16pt;
+}
+
+#num option
+{
+height:50px;
+width:200px;
+font-size:16pt;
+}
+
+
+
+.header
+{
+position:fixed;
+background-color:yellow;
+height:100px;
+width:100%;
+top:0;
+left:0;
+}
+
+.pic
+{
+float:left;
+margin-top:-20px;
+}
+
+.name
+{
+float:left;
+margin-top:10px;
+font-size:24pt;
+font-family:arial;
+}
+
+</style>
+</head>
+<body>
+<div class="header">
+<div class="pic">
+<img src="TypeFast1.png" height=100 width=100>
+</div>
+<div class="name">
+TypeFast
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-4">
+<font size="5" face="Arial">
+Select Your lesson
+</font>
+</div>
+<div class="col-md-6">
+<select id="num" name="lesson" onchange="changeFunc()">
+<option value="l1">Lesson1</option>
+<option value="l2">Lesson2</option>
+<option value="l3">Lesson3</option>
+<option value="l4">Lesson4</option>
+<option value="l5">Lesson5</option>
+</select>
+</div>
+</div>
+</body>
+</html>

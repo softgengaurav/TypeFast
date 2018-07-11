@@ -1,0 +1,85 @@
+<html>
+<head>
+<script src="js/b.js"></script>
+<script src="js/bootstrap.js"></script>
+<link rel="stylesheet" href="css/bootstrap.css">
+<style>
+
+.header
+{
+position:fixed;
+top:0;
+width:100%;
+left:0;
+height:100px;
+background-color:yellow;
+}
+
+.pic
+{
+float:left;
+margin-top:-20px;
+}
+
+.name
+{
+float:left;
+margin-top:10px;
+font-size:24pt;
+font-family:arial;
+}
+
+.highlight1
+{
+font-size:16pt;
+font-family:arial;
+color:maroon;
+font-weight:bold;
+}
+
+.highlight2
+{
+font-size:14pt;
+font-family:arial;
+color:blue;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<div class="pic">
+<img src="TypeFast1.png" height=100 width=100>
+</div>
+<div class="name">
+TypeFast
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-4"></div>
+<div class="col-md-3 highlight1">
+SPEED(words/min)
+</div>
+<div class="col-md-3 highlight1">
+TIME TAKEN(sec)
+</div>
+</div>
+<br><br>
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-4">
+<font size="6" face="Arial" >
+Result
+</font>
+</div>
+<div class="col-md-3 highlight2">
+<div id="speed"></div>
+</div>
+<div class="col-md-3 highlight2">
+<div id="time"></div>
+</div>
+</div>
+</body>
+</html>
